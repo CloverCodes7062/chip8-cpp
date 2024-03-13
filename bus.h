@@ -57,7 +57,7 @@ public:
 
     uint8_t get_delay_timer() const;
 
-    const uint8_t* get_display_buffer() const;
+    const uint8_t * get_display_buffer() const;
 
     void print_ram() const;
 };

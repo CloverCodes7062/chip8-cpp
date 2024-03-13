@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <random>
 #include "cpu.h"
 const uint16_t PROGRAM_START = 0x200;
 
@@ -50,6 +51,7 @@ void Cpu::run_instruction(Bus &bus) {
         }
         case 0x1: {
             pc = nnn;
+            break;
         }
         case 0x2: {
             ret_stack.push(pc + 2);
@@ -59,6 +61,15 @@ void Cpu::run_instruction(Bus &bus) {
         case 0x3: {
             uint8_t local_vx = read_reg_vx(x);
             if (local_vx == nn) {
+                pc += 4;
+            } else {
+                pc += 2;
+            }
+            break;
+        }
+        case 0x4: {
+            uint8_t local_vx = read_reg_vx(x);
+            if (local_vx != nn) {
                 pc += 4;
             } else {
                 pc += 2;
@@ -82,12 +93,44 @@ void Cpu::run_instruction(Bus &bus) {
             pc += 2;
             break;
         }
+        case 0xC: {
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<uint8_t> dist(0, 255);
+            uint8_t random_number = dist(gen);
+            uint8_t result = random_number & nn;
+            write_reg_vx(x, result);
+
+            pc += 2;
+            break;
+        }
         case 0xD: {
             uint8_t local_vx = read_reg_vx(x);
             uint8_t local_vy = read_reg_vx(y);
 
             debug_draw_sprite(bus, local_vx, local_vy, n);
             pc += 2;
+            break;
+        }
+        case 0xF: {
+            switch (nn) {
+                case 0x15: {
+                    bus.set_delay_timer(read_reg_vx(x));
+                    pc += 2;
+                    break;
+                }
+                case 0x1E: {
+                    uint8_t local_vx = read_reg_vx(x);
+                    i += local_vx;
+                    pc += 2;
+                    break;
+                }
+                default: {
+                    std::cerr << "Unknown 0xF0** instruction: " << std::hex << pc << ": " << instruction << std::endl;
+                    Cpu::panic();
+                    break;
+                }
+            }
             break;
         }
         default: {

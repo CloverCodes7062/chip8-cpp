@@ -14,12 +14,13 @@ public:
     void clear();
     const uint8_t* get_display_buffer() const;
 
+    static size_t get_index_from_coords(size_t x, size_t y);
+
 private:
     static constexpr size_t WIDTH = 64;
     static constexpr size_t HEIGHT = 32;
     uint8_t screen[WIDTH * HEIGHT];
 
-    static size_t get_index_from_coords(size_t x, size_t y);
 };
 
 #endif //CHIP8_DISPLAY_H

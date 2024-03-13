@@ -20,6 +20,8 @@ public:
     void load_rom(const std::vector<uint8_t>& data);
     void run_instruction();
     void print_ram() const;
+
+    const uint8_t * get_display_buffer();
 };
 
 #endif //CHIP8_CHIP8_H

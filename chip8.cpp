@@ -20,3 +20,7 @@ void Chip8::print_ram() const {
 void Chip8::run_instruction() {
     cpu.run_instruction(bus);
 }
+
+const uint8_t * Chip8::get_display_buffer() {
+    return bus.get_display_buffer();
+}
