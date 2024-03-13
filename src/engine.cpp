@@ -67,19 +67,25 @@ void Engine::process_input() {
 
     sf::Event event;
 
+
     while (window.pollEvent(event)) {
         if (event.type == sf::Event::Closed) {
             window.close();
         }
         else if (event.type == sf::Event::KeyPressed) {
-            auto chip8_key = get_chip8_keycode_for(event.key.code);
+            if (!key_pressed) {
+                auto chip8_key = get_chip8_keycode_for(event.key.code);
 
-            if (chip8_key.has_value()) {
-
-                chip8.set_key_pressed(chip8_key);
-
-                last_key_update_time = std::chrono::steady_clock::now();
+                if (chip8_key.has_value()) {
+                    chip8.set_key_pressed(chip8_key);
+                    last_key_update_time = std::chrono::steady_clock::now();
+                    key_pressed = true;
+                }
             }
+        }
+        else if (event.type == sf::Event::KeyReleased) {
+            key_pressed = false;
+            chip8.set_key_pressed(std::nullopt);
         }
     }
 }

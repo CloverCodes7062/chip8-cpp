@@ -12,6 +12,7 @@ class Engine {
 public:
     Engine(const std::string& rom_path);
     void run();
+    bool key_pressed;
 
 private:
     static const int WIDTH = 640;

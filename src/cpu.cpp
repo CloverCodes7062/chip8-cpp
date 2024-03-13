@@ -88,6 +88,67 @@ void Cpu::run_instruction(Bus &bus) {
             pc += 2;
             break;
         }
+        case 0x8: {
+            uint8_t vx = read_reg_vx(x);
+            uint8_t vy = read_reg_vx(y);
+
+            switch (n) {
+                case 0: {
+                    write_reg_vx(x, vy);
+                    break;
+                }
+                case 2: {
+                    write_reg_vx(x, vx & vy);
+                    break;
+                }
+                case 3: {
+                    write_reg_vx(x, vx ^ vy);
+                    break;
+                }
+                case 4: {
+                    uint16_t sum = static_cast<uint16_t>(vx) + static_cast<uint16_t>(vy);
+                    write_reg_vx(x, static_cast<uint8_t>(sum));
+                    if (sum > 0xFF) {
+                        write_reg_vx(0xF, 1);
+                    } else {
+                        write_reg_vx(0xF, 0);
+                    }
+                    break;
+                }
+                case 5: {
+                    int8_t diff = static_cast<int8_t>(vx) - static_cast<int8_t>(vy);
+                    write_reg_vx(x, static_cast<uint8_t>(diff));
+                    if (diff < 0) {
+                        write_reg_vx(0xF, 0);
+                    } else {
+                        write_reg_vx(0xF, 1);
+                    }
+                    break;
+                }
+                case 6: {
+                    write_reg_vx(0xF, vy & 0x1);
+                    write_reg_vx(y, vy >> 1);
+                    write_reg_vx(x, vy >> 1);
+                    break;
+                }
+                default: {
+                    throw std::runtime_error("Unknown 0x8** instruction");
+                }
+            }
+            pc += 2;
+            break;
+        }
+        case 0x9: {
+            uint8_t vx = read_reg_vx(x);
+            uint8_t vy = read_reg_vx(y);
+
+            if (vx != vy) {
+                pc += 4;
+            } else {
+                pc += 2;
+            }
+            break;
+        }
         case 0xA: {
             i = nnn;
             pc += 2;
@@ -141,6 +202,11 @@ void Cpu::run_instruction(Bus &bus) {
         }
         case 0xF: {
             switch (nn) {
+                case 0x7: {
+                    write_reg_vx(x, bus.get_delay_timer());
+                    pc += 2;
+                    break;
+                }
                 case 0x15: {
                     bus.set_delay_timer(read_reg_vx(x));
                     pc += 2;
