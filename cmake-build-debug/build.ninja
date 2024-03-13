@@ -49,41 +49,54 @@ cmake_ninja_workdir = C$:/Users/Stacy/Desktop/cppProjects/chip8/cmake-build-debu
 
 build cmake_object_order_depends_target_chip8: phony || CMakeFiles/chip8.dir
 
-build CMakeFiles/chip8.dir/main.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/main.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\main.cpp.obj.d
+build CMakeFiles/chip8.dir/src/main.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/main.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
-build CMakeFiles/chip8.dir/chip8.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/chip8.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\chip8.cpp.obj.d
+build CMakeFiles/chip8.dir/src/chip8.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/chip8.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\chip8.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
-build CMakeFiles/chip8.dir/ram.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/ram.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\ram.cpp.obj.d
+build CMakeFiles/chip8.dir/src/ram.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/ram.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\ram.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
-build CMakeFiles/chip8.dir/cpu.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/cpu.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\cpu.cpp.obj.d
+build CMakeFiles/chip8.dir/src/cpu.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/cpu.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\cpu.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
-build CMakeFiles/chip8.dir/bus.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/bus.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\bus.cpp.obj.d
+build CMakeFiles/chip8.dir/src/bus.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/bus.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\bus.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
-build CMakeFiles/chip8.dir/display.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/display.cpp || cmake_object_order_depends_target_chip8
-  DEP_FILE = CMakeFiles\chip8.dir\display.cpp.obj.d
+build CMakeFiles/chip8.dir/src/display.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/display.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\display.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
   OBJECT_DIR = CMakeFiles\chip8.dir
-  OBJECT_FILE_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
+
+build CMakeFiles/chip8.dir/src/engine.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug C$:/Users/Stacy/Desktop/cppProjects/chip8/src/engine.cpp || cmake_object_order_depends_target_chip8
+  DEP_FILE = CMakeFiles\chip8.dir\src\engine.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Stacy/Desktop/cppProjects/chip8/headers -Ic:/SFML/include -IC:/SFML/include
+  OBJECT_DIR = CMakeFiles\chip8.dir
+  OBJECT_FILE_DIR = CMakeFiles\chip8.dir\src
 
 
 # =============================================================================
@@ -93,9 +106,9 @@ build CMakeFiles/chip8.dir/display.cpp.obj: CXX_COMPILER__chip8_unscanned_Debug 
 #############################################
 # Link the executable chip8.exe
 
-build chip8.exe: CXX_EXECUTABLE_LINKER__chip8_Debug CMakeFiles/chip8.dir/main.cpp.obj CMakeFiles/chip8.dir/chip8.cpp.obj CMakeFiles/chip8.dir/ram.cpp.obj CMakeFiles/chip8.dir/cpu.cpp.obj CMakeFiles/chip8.dir/bus.cpp.obj CMakeFiles/chip8.dir/display.cpp.obj
+build chip8.exe: CXX_EXECUTABLE_LINKER__chip8_Debug CMakeFiles/chip8.dir/src/main.cpp.obj CMakeFiles/chip8.dir/src/chip8.cpp.obj CMakeFiles/chip8.dir/src/ram.cpp.obj CMakeFiles/chip8.dir/src/cpu.cpp.obj CMakeFiles/chip8.dir/src/bus.cpp.obj CMakeFiles/chip8.dir/src/display.cpp.obj CMakeFiles/chip8.dir/src/engine.cpp.obj | C$:/SFML/lib/libsfml-system-d.a C$:/SFML/lib/libsfml-window-d.a C$:/SFML/lib/libsfml-graphics-d.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/SFML/lib/libsfml-system-d.a  C:/SFML/lib/libsfml-window-d.a  C:/SFML/lib/libsfml-graphics-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\chip8.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -148,14 +161,14 @@ build all: phony chip8.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Stacy/Desktop/cppProjects/chip8/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Stacy/Desktop/cppProjects/chip8/CMakeLists.txt C$:/Users/Stacy/Desktop/cppProjects/chip8/cmake_modules/FindSFML.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Stacy/Desktop/cppProjects/chip8/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Stacy/Desktop/cppProjects/chip8/CMakeLists.txt C$:/Users/Stacy/Desktop/cppProjects/chip8/cmake_modules/FindSFML.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

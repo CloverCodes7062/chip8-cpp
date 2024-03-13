@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "bus.h"
+#include "../headers/bus.h"
 
 Bus::Bus() : ram(), display(), delay_timer(0), delay_timer_set_time(std::chrono::steady_clock::now()) {}
 

@@ -2,7 +2,7 @@
 // Created by Stacy on 3/12/2024.
 //
 
-#include "chip8.h"
+#include "../headers/chip8.h"
 #include <vector>
 
 Chip8::Chip8() : bus() {}

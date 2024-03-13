@@ -2,7 +2,7 @@
 // Created by Stacy on 3/12/2024.
 //
 
-#include "display.h"
+#include "../headers/display.h"
 Display::Display() {
     clear();
 }

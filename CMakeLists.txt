@@ -3,22 +3,34 @@ project(chip8)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SFML_ROOT "C:/Users/Stacy/Desktop/cppProjects/chip8/SFML-2.6.1")
-
-find_package(SFML 2.6.1 COMPONENTS graphics window system REQUIRED)
-
 add_executable(chip8
-        main.cpp
-        chip8.cpp
-        chip8.h
-        ram.cpp
-        ram.h
-        cpu.cpp
-        cpu.h
-        bus.cpp
-        bus.h
-        display.cpp
-        display.h
+        src/main.cpp
+        src/chip8.cpp
+        headers/chip8.h
+        src/ram.cpp
+        headers/ram.h
+        src/cpu.cpp
+        headers/cpu.h
+        src/bus.cpp
+        headers/bus.h
+        src/display.cpp
+        headers/display.h
+        headers/engine.h
+        src/engine.cpp
 )
 
-target_link_libraries(chip8 sfml-graphics sfml-window sfml-system)
+include_directories(headers c:/SFML/include)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
+find_package(SFML REQUIRED system window graphics)
+
+if (SFML_FOUND)
+    include_directories(${SFML_INCLUDE_DIR})
+    target_link_libraries(chip8 ${SFML_LIBRARIES})
+endif()
+
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
+if (WIN32)
+    file(GLOB BINARY_DEP_DLLS "${SFML_INCLUDE_DIR}/../bin/*.dll")
+    file(COPY ${BINARY_DEP_DLLS} DESTINATION ${CMAKE_BINARY_DIR})
+endif()
+

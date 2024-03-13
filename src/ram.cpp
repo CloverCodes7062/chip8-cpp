@@ -2,7 +2,7 @@
 // Created by Stacy on 3/12/2024.
 //
 
-#include "ram.h"
+#include "../headers/ram.h"
 #include <iostream>
 
 Ram::Ram() : mem({}) {

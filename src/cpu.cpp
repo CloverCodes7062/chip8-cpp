@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <random>
-#include "cpu.h"
+#include "../headers/cpu.h"
 const uint16_t PROGRAM_START = 0x200;
 
 Cpu::Cpu() : vx(16, 0), pc(PROGRAM_START), i(0), ret_stack() {}
