@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.27)
 project(chip8)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(chip8
         src/main.cpp
@@ -17,6 +17,8 @@ add_executable(chip8
         headers/display.h
         headers/engine.h
         src/engine.cpp
+        headers/keyboard.h
+        src/keyboard.cpp
 )
 
 include_directories(headers c:/SFML/include)

@@ -47,3 +47,15 @@ uint8_t Bus::get_delay_timer() const {
 const uint8_t * Bus::get_display_buffer() const {
     return display.get_display_buffer();
 }
+
+void Bus::set_key_pressed(std::optional<uint8_t> key) {
+    keyboard.set_key_pressed(key);
+}
+
+bool Bus::is_key_pressed(uint8_t key_code) const {
+    return keyboard.is_key_pressed(key_code);
+}
+
+std::optional<uint8_t> Bus::get_key_pressed() const {
+    return keyboard.get_key_pressed();
+}

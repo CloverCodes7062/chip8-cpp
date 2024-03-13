@@ -22,6 +22,8 @@ public:
     void print_ram() const;
 
     const uint8_t * get_display_buffer();
+
+    void set_key_pressed(std::optional<uint8_t> key);
 };
 
 #endif //CHIP8_CHIP8_H

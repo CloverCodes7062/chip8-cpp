@@ -8,31 +8,13 @@
 #include <chrono>
 #include "ram.h"
 #include "display.h"
-
-
-template<typename T>
-class Optional {
-private:
-    bool is_value_present;
-    T value;
-
-public:
-    Optional() : is_value_present(false), value(T()) {}
-    Optional(const T& val) : is_value_present(true), value(val) {}
-
-    bool has_value() const {
-        return is_value_present;
-    }
-
-    const T& get_value() const {
-        return value;
-    }
-};
+#include "keyboard.h"
 
 class Bus {
 private:
     Ram ram;
     Display display;
+    Keyboard keyboard;
     uint8_t delay_timer;
     std::chrono::steady_clock::time_point delay_timer_set_time;
 
@@ -47,11 +29,11 @@ public:
 
     void clear_screen();
 
-    void set_key_pressed(Optional<uint8_t> key);
+    void set_key_pressed(std::optional<uint8_t> key);
 
     bool is_key_pressed(uint8_t key_code) const;
 
-    Optional<uint8_t> get_key_pressed() const;
+    std::optional<uint8_t> get_key_pressed() const;
 
     void set_delay_timer(uint8_t value);
 

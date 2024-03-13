@@ -112,6 +112,33 @@ void Cpu::run_instruction(Bus &bus) {
             pc += 2;
             break;
         }
+        case 0xE: {
+            switch (nn) {
+                case 0xA1: {
+                    uint8_t key = read_reg_vx(x);
+                    if (!bus.is_key_pressed(key)) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
+                    break;
+                }
+                case 0x9E: {
+                    uint8_t key = read_reg_vx(x);
+                    if (bus.is_key_pressed(key)) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
+                    break;
+                }
+                default:
+                    std::cerr << "Unknown 0xEX** instruction: " << std::hex << pc << ": " << instruction << std::endl;
+                    panic();
+                    break;
+            }
+            break;
+        }
         case 0xF: {
             switch (nn) {
                 case 0x15: {

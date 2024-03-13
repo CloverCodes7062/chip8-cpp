@@ -24,3 +24,7 @@ void Chip8::run_instruction() {
 const uint8_t * Chip8::get_display_buffer() {
     return bus.get_display_buffer();
 }
+
+void Chip8::set_key_pressed(std::optional<uint8_t> key) {
+    bus.set_key_pressed(key);
+}
