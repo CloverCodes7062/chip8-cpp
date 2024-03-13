@@ -76,6 +76,17 @@ void Cpu::run_instruction(Bus &bus) {
             }
             break;
         }
+        case 0x5: {
+            uint8_t local_vx = read_reg_vx(x);
+            uint8_t local_vy = read_reg_vx(y);
+
+            if (local_vx == local_vy) {
+                pc += 4;
+            } else {
+                pc += 2;
+            }
+            break;
+        }
         case 0x6: {
             write_reg_vx(x, nn);
             pc += 2;
@@ -139,10 +150,10 @@ void Cpu::run_instruction(Bus &bus) {
             break;
         }
         case 0x9: {
-            uint8_t vx = read_reg_vx(x);
-            uint8_t vy = read_reg_vx(y);
+            uint8_t local_vx = read_reg_vx(x);
+            uint8_t local_vy = read_reg_vx(y);
 
-            if (vx != vy) {
+            if (local_vx != local_vy) {
                 pc += 4;
             } else {
                 pc += 2;
@@ -210,6 +221,47 @@ void Cpu::run_instruction(Bus &bus) {
                 case 0x15: {
                     bus.set_delay_timer(read_reg_vx(x));
                     pc += 2;
+                    break;
+                }
+                case 0x29: {
+                    uint8_t local_vx = read_reg_vx(x);
+                    i = local_vx * 5;
+                    pc += 2;
+                }
+                case 0x33: {
+                    uint8_t local_vx = read_reg_vx(x);
+                    uint8_t hundreds = local_vx / 100;
+                    uint8_t tens = (local_vx % 100) / 10;
+                    uint8_t ones = local_vx % 10;
+                    bus.ram_write_byte(i, hundreds);
+                    bus.ram_write_byte(i + 1, tens);
+                    bus.ram_write_byte(i + 2, ones);
+                    pc += 2;
+                    break;
+                }
+                case 0x55: {
+                    for (int index = 0; index <= x; ++index) {
+                        uint8_t value = read_reg_vx(index);
+                        bus.ram_write_byte(i + index, value);
+                    }
+                    i += x + 1;
+                    pc += 2;
+                    break;
+                }
+                case 0x65: {
+                    for (int index = 0; index <= x; ++index) {
+                        uint8_t value = bus.ram_read_byte(i + index);
+                        write_reg_vx(index, value);
+                    }
+                    pc += 2;
+                    break;
+                }
+                case 0x0A: {
+                    std::optional<uint8_t> key = bus.get_key_pressed();
+                    if (key.has_value()) {
+                        write_reg_vx(x, key.value());
+                        pc += 2;
+                    }
                     break;
                 }
                 case 0x1E: {

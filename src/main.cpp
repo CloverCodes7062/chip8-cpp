@@ -11,7 +11,7 @@ const int WIDTH = 320;
 const int SCALE = 10;
 
 int main(int argc, char* argv[]) {
-    string rom_path = R"(C:\Users\Stacy\Desktop\cppProjects\chip8\data\TETRIS.bin)";
+    string rom_path = R"(C:\Users\Stacy\Desktop\cppProjects\chip8\data\MERLIN.bin)";
 
     Engine engine(rom_path);
     engine.run();
